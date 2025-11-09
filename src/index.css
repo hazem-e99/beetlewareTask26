@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.5);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.7);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 95%;;
+    --foreground: 240 10% 3.9%;
+    --bgBody: 0 0% 95%/ 1;
+    --lineNav: 0, 0%, 88%, 1;
+    --NavBarBG:0, 0%, 100%, 1;
+    --circle:80, 27%, 89%, 1;
+    --footerBG:0, 0%, 88%, 1;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 84 81% 44%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 84 81% 60%;
+
+    --secondary: 0 0 74%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 84 81% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 84 81% 44%;
+
+    --radius: 1rem;
+
+    --chart-1: 84 81% 44%;
+    --chart-2: 197 100% 48%;
+    --chart-3: 346 77% 50%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+
+ --dynamicBorder: 255 13% 13% / 1;
+   --BgLine: 255 7% 12% / 1;
+   --BgInput: 0 0% 100% / 1;
+
+    --container-bg: 0 0% 96%;
+    --container-text: 0 0% 12%;
+
+    --gradient-glow: linear-gradient(
+      180deg,
+      rgba(132, 204, 22, 0.15) 0%,
+      rgba(132, 204, 22, 0) 100%
+    );
+    --shadow-glow: 0 0 40px rgba(132, 204, 22, 0.3);
+
+    --analytics-text: #333333;
+    --chart-bg: #F4F4F4;
+    --textF:0, 0%, 31%, 1;
+    --textP: 0 0% 20% / 1;
+    --BgButton: 0 0% 100% / 1;
+    --TextCTA: 255, 7%, 12%, 1;
+    --headTitle: 78, 100%, 99%, 1;
+    --bgPricingSection: 0, 0%, 96%, 1;
+    --bgPricingCard: 0, 0%, 95%, 1;
+    --line: 0, 0%, 95%, 1;
+    --pricingCardBorder: 0, 0%, 74%, 1;
+      --featureP: 0, 0%, 20%, 1
+
+
+
+  }
+
+  .dark {
+    --background: 0 0% 6% / 1;
+    --foreground: 0 0% 98%;
+    --NavBarBG:0, 0%, 6%, 1;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+    --lineNav: 0, 0%, 9%, 1;
+    --circle:0, 0%, 10%, 1;
+    --footerBG:0, 0%, 6%, 1;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 84 81% 44%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 84 81% 60%;
+
+    --secondary: 0 0 20%;
+    --secondary-foreground: 0 0% 98%;
+
+     --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 100%; 
+
+    --accent: 84 81% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 84 81% 44%;
+
+    --chart-1: 84 81% 44%;
+    --chart-2: 197 100% 48%;
+    --chart-3: 346 77% 50%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+   --dynamicBorder: 80 71% 52% / 1;
+   --textF: 0 4% 71% / 1;
+   --textP: 230 3% 62% / 1;
+   --BgLine: 255 7% 12% / 1;
+   --BgInput: 0 0% 14% / 1;
+   --BgButton: 0 0% 12% / 1;
+   --headTitle: 78, 72%, 7%, 1;
+  --bgPricingSection: 255, 7%, 12%, 1;
+  --bgPricingCard: 0, 0%, 9%, 1;
+  --line: 0, 0%, 14%, 1;
+  --pricingCardBorder: 0, 0%, 14%, 1;
+  --featureP: 0, 0%, 51%, 1;
+
+
+
+
+
+
+    --container-bg: 0 0% 12%;
+    --container-text: 0 0% 96%;
+    --gradient-glow: linear-gradient(
+      180deg,
+      rgba(132, 204, 22, 0.2) 0%,
+      rgba(132, 204, 22, 0) 100%
+    );
+    --shadow-glow: 0 0 60px rgba(132, 204, 22, 0.4);
+
+    --analytics-text: #9B9CA1;
+    --chart-bg: #1A1A1A;
+    --bgBody: 0 0% 6% / 1;
+    --TextCTA: 0 0% 100% / 1;
+
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* Smooth color transitions when theme changes */
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+  }
+}
+
+@media (min-width: 1440px) {
+  .custom-margin {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+/* لشاشة 1920px */
+@media (min-width: 1920px) {
+  .custom-margin {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}

@@ -1,0 +1,48 @@
+export const pricingPlans = [
+  {
+    name: "Basic",
+    price: 499,
+    period: "/month",
+    description: "Get started with our essential tools for small teams.",
+    features: [
+      "Get a fully designed Website.",
+      "Webflow Development",
+      "Limited Support",
+    ],
+    isPopular: false,
+    btn: "Get Started",
+  },
+  {
+    name: "Pro",
+    price: 499,
+    period: "/month",
+    description: "Perfect for growing businesses with advanced needs.",
+    features: [
+      "Get a fully designed Website.",
+      "Webflow Development",
+      "Limited Support",
+      "Standart integrations",
+      "Email support",
+      "Email support",
+    ],
+    isPopular: true,
+    btn: "Get Started",
+  },
+  {
+    name: "Enterprise",
+    price: 499,
+    period: "/month",
+    description: "Custom solutions for large-scale operations.",
+    features: [
+      "Get a fully designed Website.",
+      "Webflow Development",
+      "Limited Support",
+      "Standart integrations",
+      "Email support",
+      "Email support",
+      "Email support",
+    ],
+    isPopular: false,
+    btn: "Contact Us",
+  },
+];
