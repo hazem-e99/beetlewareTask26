@@ -1,4 +1,3 @@
-import { Toaster } from "./components/ui/toaster.jsx";
 import { Toaster as Sonner } from "./components/ui/sonner.jsx";
 import { TooltipProvider } from "./components/ui/tooltip.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -16,7 +15,6 @@ const App = () => (
         <div className="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-6 md:left-6 z-50">
           <ThemeToggle />
         </div>
-        <Toaster />
         <Sonner />
         <BrowserRouter>
           <Routes>
